@@ -51,6 +51,9 @@ jobs:
             - name: Run migrations
               env:
                 POSTGRES_HOST: localhost
+                POSTGRES_USER: postgres
+                POSTGRES_PASSWORD: postgres
+                POSTGRES_DB: postgres
                 POSTGRES_PORT: 5432
               run: |
                 php bin/console doctrine:schema:update --force -q
